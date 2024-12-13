@@ -1,0 +1,286 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #fff; /* White text for dark theme */
+    background-color: #1e1e1e; /* Dark background */
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack children vertically */
+    min-height: 100vh; /* Make body at least full viewport height */
+    position: relative; /* Position context for background */
+}
+.container {
+    flex: 1; /* Allow the main content to grow and fill space */
+    position: relative; /* Position context for child elements */
+}
+/* Background Image */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('background.jpg'); /* Your background image */
+    background-size: cover; /* Cover the entire body */
+    background-position: center; /* Center the image */
+    filter: blur(8px); /* Apply blur effect */
+    z-index: -1; /* Place behind other content */
+}
+
+/* Container to manage content layout */
+.container {
+    flex: 1; /* Allow the main content to grow and fill space */
+    position: relative; /* Position context for child elements */
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgba(44, 44, 44, 0.7); /* Semi-transparent header background */
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: #00ff00; /* Hacker green for links */
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    color: #fff; /* White text for the hero section */
+    padding: 80px 30px;
+    text-align: center;
+}
+
+/* Hero Text Styling */
+.hero-text h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.7); /* Text shadow for readability */
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.7); /* Text shadow for readability */
+}
+
+.cta-button {
+    background-color: #00ff00; /* Hacker green button */
+    color: #1e1e1e; /* Dark text for button */
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+/* Features Section */
+/* Features Section */
+.features {
+    padding: 50px 30px;
+    text-align: center;
+    /* Remove any background color to allow blurred background to show through */
+}
+
+.features h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.7); /* Text shadow for readability */
+}
+
+.feature-list {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    background-color: rgba(0, 255, 0, 0.1); /* Transparent hacker green */
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect to make the features float */
+.feature-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* About Section */
+.about {
+    padding: 50px 30px;
+    text-align: center; /* Center all text */
+}
+
+.about h2, .about h3 {
+    color: #00ff00; /* Hacker green headings */
+    text-align: center; /* Center headings explicitly */
+}
+
+.about p, .about ul {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center; /* Center paragraph and list items */
+}
+
+.about ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    text-align: center; /* Center list */
+}
+
+.about ul li {
+    margin: 10px 0;
+}
+
+
+/* Login Section */
+.login {
+    text-align: center;
+    flex: 1;
+}
+
+/* Center the login bubble */
+.login-bubble {
+    background-color: rgba(0, 255, 0, 0.1); /* Transparent hacker green */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 100%;
+}
+
+
+.login h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.7); /* Text shadow for readability */
+}
+
+.login-bubble {
+    background-color: rgba(0, 255, 0, 0.1); /* Transparent hacker green for the login bubble */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.7); /* Text shadow for label readability */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #00ff00; /* Hacker green border */
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1); /* Light background with transparency */
+    color: #fff; /* White text */
+}
+
+.login-button {
+    background-color: #00ff00; /* Hacker green for login button */
+    color: #1e1e1e; /* Dark text for button */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 30px;
+    text-align: center; /* Center text */
+}
+
+.contact h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #00ff00; /* Hacker green */
+}
+
+.contact p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto; /* Center the form */
+    background-color: rgba(0, 255, 0, 0.1); /* Transparent hacker green */
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #00ff00; /* Hacker green border */
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1); /* Light background with transparency */
+    color: #fff;
+}
+
+.contact-button {
+    background-color: #00ff00; /* Hacker green button */
+    color: #1e1e1e; /* Dark text for button */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #32cd32; /* Lighter green on hover */
+}
+
+/* Footer Styling */
+footer {
+    background-color: rgba(44, 44, 44, 0.7); /* Semi-transparent footer background */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto; /* Push the footer to the bottom */
+}
